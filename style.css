@@ -1,0 +1,106 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+header{
+    margin: 0;
+    padding: 10px;
+    background-color:  rgb(89, 127, 125);
+    text-align: center;
+    color: white;
+}
+
+.menu{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border-left: 2%;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(89, 127, 125);
+    height: 60px;
+    padding: 0
+}
+
+.menu .menu-items{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-items:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.image-container {
+    position: relative;
+    width: 200px; /* Width of the image */
+    height: 200px; /* Height of the image */
+    overflow: hidden; /* Ensure content stays within the container */
+}
+
+/* Image */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits the container */
+    display: block;
+}
+
+/* Text overlay container */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 13, 13, 0.5); /* Semi-transparent background */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+
+}
+
+/* Default text (visible initially) */
+.default-text {
+    position: absolute;
+    opacity: 1; /* Always visible initially */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+}
+
+/* Hover text (hidden initially) */
+.hover-text {
+    position: absolute;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+}
+
+/* On hover, switch visibility of the texts */
+.image-container:hover .default-text {
+    opacity: 0; /* Hide the default text */
+}
+
+.image-container:hover .hover-text {
+    opacity: 1; /* Show the hover text */
+}
+
+table{
+    border-style: dashed;
+    border-radius: 10px;
+    border-color: black;
+
+    & tr{
+        & td{
+            border-radius: 10px;
+            border-style: dashed;
+            padding: 10px;
+            text-align: center;
+            vertical-align: center;
+        }
+    }
+}
+
