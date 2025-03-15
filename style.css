@@ -1,106 +1,171 @@
-body{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
 }
-
-header{
-    margin: 0;
-    padding: 10px;
-    background-color:  rgb(89, 127, 125);
-    text-align: center;
+body {
+    background: #1a1a1a;
     color: white;
-}
-
-.menu{
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    border-left: 2%;
-    justify-content: space-around;
-    align-items: center;
-    background-color:rgb(89, 127, 125);
-    height: 60px;
-    padding: 0
-}
-
-.menu .menu-items{
-    text-decoration: none;
-    color: white;
-}
-
-.menu-items:hover{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.image-container {
-    position: relative;
-    width: 200px; /* Width of the image */
-    height: 200px; /* Height of the image */
-    overflow: hidden; /* Ensure content stays within the container */
-}
-
-/* Image */
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image fits the container */
-    display: block;
-}
-
-/* Text overlay container */
-.text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(14, 13, 13, 0.5); /* Semi-transparent background */
-    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
-    color: white;
-
+    min-height: 100vh;
+    flex-direction: column;
 }
-
-/* Default text (visible initially) */
-.default-text {
-    position: absolute;
-    opacity: 1; /* Always visible initially */
-    transition: opacity 0.3s ease; /* Smooth fade effect */
-}
-
-/* Hover text (hidden initially) */
-.hover-text {
-    position: absolute;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade effect */
-}
-
-/* On hover, switch visibility of the texts */
-.image-container:hover .default-text {
-    opacity: 0; /* Hide the default text */
-}
-
-.image-container:hover .hover-text {
-    opacity: 1; /* Show the hover text */
-}
-
-table{
-    border-style: dashed;
+.cv-container {
+    background: #333;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
     border-radius: 10px;
-    border-color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.header {
+    text-align: center;
+    background: #007bff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.header h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+.section {
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+.section h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.education, .experience, .projects, .certifications, .languages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-    & tr{
-        & td{
-            border-radius: 10px;
-            border-style: dashed;
-            padding: 10px;
-            text-align: center;
-            vertical-align: center;
-        }
-    }
+.projects ul {
+    padding-left: 15px;
+}
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.skills-card {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+.skills-card img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+.skills-card img:hover {
+    transform: scale(1.2); 
+}
+.skills-text {
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: opacity 0.3s ease-in-out;
+}
+.skills-card:hover .skills-text {
+    opacity: 1;
+}
+.edu-exp-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.edu-exp-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.responsibilities {
+    display: none;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #bbb;
+}
+.edu-exp-item:hover .responsibilities {
+    display: block;
+}
+.language {
+    margin: 20px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-circles {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle.filled {
+    background-color: #347536;
+    color: white;
+    font-weight: bold;
+}
+
+.circle.empty {
+    background-color: #f4f4f4;
+}
+
+.circle span {
+    font-size: 12px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: #007bff;
+    
+}
+#linkedin:hover{
+    font-size: 20px;
+    transform: scale(1.1);
+    color: white;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
 }
 
