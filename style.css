@@ -157,7 +157,20 @@ a:hover {
     color: #007bff;
     
 }
-#linkedin:hover{
+button {
+    border: none;
+    background: none;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    font-size: 20px;
+    transform: scale(1.1);
+    color: white;
+}
+#main_links:hover{
     font-size: 20px;
     transform: scale(1.1);
     color: white;
