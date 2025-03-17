@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
     <link rel="stylesheet" href="style.css">    
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="cv-container">
@@ -15,19 +16,23 @@
                 ✉️ <a id="main_links" href="mailto:mariapedrotesanz@gmail.com">mariapedrotesanz@gmail.com</a> | 
                 🔗 <a id="main_links" href="https://www.linkedin.com/in/maria-pedrote-sanz-geomatica/" target="_blank">LinkedIn</a> | 
                 <a href="CV_MariaPedroteSanz_2024_ENG.pdf" download="CV_MariaPedroteSanz.pdf">
-                    <button>📄 Download PDF CV</button>
+                    <button target="_blank">📄 Download PDF CV</button>
                 </a>
             </p>
         </div>
         
-        <div class="section">
-            <h2>Work experience</h2>
+        <div class="section" onclick="toggleExpandAll(this)">
+            <div>
+                <h2>Work experience <span class="toggle-symbol">+</span></h2>
+            </div>
+
             <div class="experience">
                 <div class="edu-exp-item">
                     <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEqQwy68z0HPQ/company-logo_200_200/company-logo_200_200/0/1709570587368/satcen_logo?e=2147483647&v=beta&t=YbXF2cbco39GILyG3Sxh19h1X-QIHr__MM09t1zlP6c"                     
                     alt="Empresa">
-                    <div>
-                        <p><strong>GIS DevOPS Officer</strong> - European Union Satellite Center (2024 - Present)</p>
+                    <div onclick="toggleExpand(this)">
+                        <p><strong>GIS DevOPS Officer</strong> - European Union Satellite Center (2024 - Present)
+                        </p>
                         <div class="responsibilities">
                             <ul>
                                 <li>Coordination with the Operations Division and end-users inputs, to perform the analysis, design, development, integration, testing and maintenance of tools and services implemented within a GIS architecture. </li>
@@ -43,11 +48,12 @@
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="edu-exp-item">
                     <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEqQwy68z0HPQ/company-logo_200_200/company-logo_200_200/0/1709570587368/satcen_logo?e=2147483647&v=beta&t=YbXF2cbco39GILyG3Sxh19h1X-QIHr__MM09t1zlP6c"                     
                     alt="Empresa">
-                    <div>
+                    <div onclick="toggleExpand(this)">
                         <p><strong>GIS Trainee</strong> - European Union Satellite Center (2023 - 2024)</p>
                         <div class="responsibilities">
                             <ul>
@@ -70,7 +76,7 @@
                 <div class="edu-exp-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmI0LsRNoFq7K6A-itNIO3rw9JFWwR4fLitw&s" 
                     alt="Empresa">
-                    <div>
+                    <div onclick="toggleExpand(this)">
                         <p><strong>GIS Developer</strong> - NTT Data (2023)</p>
                         <div class="responsibilities">
                             <ul>
@@ -88,7 +94,7 @@
                 <div class="edu-exp-item">
                     <img src="https://www.upm.es/gsfs/SFS24643"
                     alt="Empresa">
-                    <div>
+                    <div onclick="toggleExpand(this)">
                         <p><strong>GIS Analyst (Intern)</strong> - Research Centre of School of Topography, Cartography and Geodesy, UPM (2022 - 2023)</p>
                         <div class="responsibilities">
                             <ul>
@@ -107,7 +113,7 @@
                 <div class="edu-exp-item">
                     <img src="https://www.the-eshow.com/barcelona19/wp-content/uploads/2018/02/Decathlon-512x512.jpg"
                     alt="Empresa">
-                    <div>
+                    <div onclick="toggleExpand(this)">
                         <p><strong>Retailer</strong> - Decathlon Germany, Elisenhof Store in Munich (2022)</p>
                         <div class="responsibilities">
                             <ul>
@@ -125,61 +131,67 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2>Education</h2>
+        <div class="section" onclick="toggleExpandAll(this)">
+            <div>
+                <h2>Education <span class="toggle-symbol">+</span></h2>
+            </div>
             <div class="education">
                 <div class="edu-exp-item">
                     <img src="esri_ucam.png" alt="Universidad">
-                    <p><strong>Máster in Geographic Information Systems</strong> - UCAM and Esri (present)</p>
-                    <div class="responsibilities">
-                        <ul>
-                            <li>To provide a highly qualified expertise in the field of Geographic Information Systems, with a technological focus on development and management, encompassing roles such as Project Directors, Analysis Development Engineers, Consultants, Designers and GIS System Builders.</li>
-                            <li>Professionalizing knowledge in Project Management within the field of Geographic Information Systems.</li>
-                            <li>Understanding ArcGIS Pro for creating and publishing in both 2D and 3D entities, and recognizing problems and issues, as well as, how ArcGIS Pro is integrating withing other ArcGIS Platform components such as ArcGIS Online or ArcGIS Enterprise. .</li>
-                            <li>Knowledge of how file and enterprise Geodatabases, as well as multiuser Geodatabases can be integrated into an organization, Analysing the GIS architecture with SQL queries.</li>
-                            <li>Knowledge of detection and correction error tools withing the ArcGIS system.</li>
-                            <li>Knowledge of advanced spatial analysis and methods and geoprocessing tools within ArcGIS Pro for both 2D and 3D, vector, raster, LiDAR and non-geospatial data.</li>
-                            <li>Knowledge of workflows to visualize and extract information from satellite image and remote sensing sensors.</li>
-                            <li>Knowledge of ArcGIS Network Analyst extension for creating, modelling, visualizing and analysing transport networks.</li>
-                            <li>Knowledge of task automation with both ModelBuilder workflows and geoprocessing scripts with Python</li>
-                            <li>Knowledge of GIS architecture deployment with ArcGIS, including both Web GIS and ArcGIS Enterprise.</li>
-                            <li>Knowledge of Python API for ArcGIS for deployment, Web GIS administration and spatial Analysis.</li>
-                            <li>Knowledge of Web Application development with HTML5, CSS, JavaScript and ArcGIS Map SDK for JavaScript.</li>
-                        </ul>
+                    <div>                    
+                        <p><strong>Máster in Geographic Information Systems</strong> - UCAM and Esri (present)</p>
+                        <div class="responsibilities">
+                            <ul>
+                                <li>To provide a highly qualified expertise in the field of Geographic Information Systems, with a technological focus on development and management, encompassing roles such as Project Directors, Analysis Development Engineers, Consultants, Designers and GIS System Builders.</li>
+                                <li>Professionalizing knowledge in Project Management within the field of Geographic Information Systems.</li>
+                                <li>Understanding ArcGIS Pro for creating and publishing in both 2D and 3D entities, and recognizing problems and issues, as well as, how ArcGIS Pro is integrating withing other ArcGIS Platform components such as ArcGIS Online or ArcGIS Enterprise. .</li>
+                                <li>Knowledge of how file and enterprise Geodatabases, as well as multiuser Geodatabases can be integrated into an organization, Analysing the GIS architecture with SQL queries.</li>
+                                <li>Knowledge of detection and correction error tools withing the ArcGIS system.</li>
+                                <li>Knowledge of advanced spatial analysis and methods and geoprocessing tools within ArcGIS Pro for both 2D and 3D, vector, raster, LiDAR and non-geospatial data.</li>
+                                <li>Knowledge of workflows to visualize and extract information from satellite image and remote sensing sensors.</li>
+                                <li>Knowledge of ArcGIS Network Analyst extension for creating, modelling, visualizing and analysing transport networks.</li>
+                                <li>Knowledge of task automation with both ModelBuilder workflows and geoprocessing scripts with Python</li>
+                                <li>Knowledge of GIS architecture deployment with ArcGIS, including both Web GIS and ArcGIS Enterprise.</li>
+                                <li>Knowledge of Python API for ArcGIS for deployment, Web GIS administration and spatial Analysis.</li>
+                                <li>Knowledge of Web Application development with HTML5, CSS, JavaScript and ArcGIS Map SDK for JavaScript.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="education">
                 <div class="edu-exp-item">
                     <img src="https://www.upm.es/gsfs/SFS24643" alt="Universidad">
-                    <p><strong>Bachelor in Geomatic Engineering</strong> - Polytechnical University of Madrid (UPM)</p>
-                    <div class="responsibilities">
-                        <ul>
-                            <li>Designing and developing geomatic projects, such as natural risk management, digital twins or topographic projects.</li>
-                            <li>Programming and databases management for GIS applications and development of Geographic Information Systems.</li>
-                            <li>Photogrammetric methods for cartography generation.</li>
-                            <li>Analysis of spatial data, aerial imagery and satellite imagery with Remote Sensing.</li>
-                            <li>Designing and production of basic and thematic cartography.</li>
-                            <li>Implementation and management of Geographic Information System projects.</li>
-                            <li>Building Information Modelling (BIM) integration into GIS.</li>
-                            <li>Management of Spatial Data Infrastructure.</li>
-                            <li>Urbanism history, procedures and property valuation.</li>
-                            <li>Digital cartography generation in 3D for smart cities and digital Twins.</li>
-                        </ul>
+                    <div>
+                        <p><strong>Bachelor in Geomatic Engineering</strong> - Polytechnical University of Madrid (UPM)</p>
+                        <div class="responsibilities">
+                            <ul>
+                                <li>Designing and developing geomatic projects, such as natural risk management, digital twins or topographic projects.</li>
+                                <li>Programming and databases management for GIS applications and development of Geographic Information Systems.</li>
+                                <li>Photogrammetric methods for cartography generation.</li>
+                                <li>Analysis of spatial data, aerial imagery and satellite imagery with Remote Sensing.</li>
+                                <li>Designing and production of basic and thematic cartography.</li>
+                                <li>Implementation and management of Geographic Information System projects.</li>
+                                <li>Building Information Modelling (BIM) integration into GIS.</li>
+                                <li>Management of Spatial Data Infrastructure.</li>
+                                <li>Urbanism history, procedures and property valuation.</li>
+                                <li>Digital cartography generation in 3D for smart cities and digital Twins.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="education">
                 <div class="edu-exp-item">
                     <img src="https://searchvectorlogo.com/wp-content/uploads/2019/06/technical-university-of-munich-tum-logo-vector.png" alt="Universidad">
-                    <p><strong>Erasmus in Geodesy and Geoinformation</strong> - Technische Universität München (TUM)</p>
-                    <div class="responsibilities">
-                        <ul>
-                            <li>Advanced UML diagrams.</li>
-                            <li>ISO and OGC standards and services</li>
-                            <li>XML fundamentals and structure.</li>
-                            <li>BIM and GIS integrations approaches.</li>
-                            <li>INS and GPS navigations sensors.</li>
-                            <li>German language and culture understanding.</li>
-                        </ul>
+                    <div>
+                        <p><strong>Erasmus in Geodesy and Geoinformation</strong> - Technische Universität München (TUM)</p>
+                        <div class="responsibilities">
+                            <ul>
+                                <li>Advanced UML diagrams.</li>
+                                <li>ISO and OGC standards and services</li>
+                                <li>XML fundamentals and structure.</li>
+                                <li>BIM and GIS integrations approaches.</li>
+                                <li>INS and GPS navigations sensors.</li>
+                                <li>German language and culture understanding.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,6 +368,20 @@
         </div>
 
         <div class="section">
+            <h2>Awards</h2>
+            <div class="projects">
+                <p><strong>The Digital Twin of Southern Campus UPM project was awarded with:</strong></p>
+                <ul>
+                    <li>Campus Sustainability grant - UPM (2023).</li>
+                    <li>Second prize of the International Awards of Francisco Coello - University of Jaén (2024).<a href="https://eps.ujaen.es/sites/centro_eps/files/uploads/ACTA_PREMIO_COELLO_2024.pdf"> + info (in Spanish)</a></li>
+                    <li>First prize in the GeoData Awards - Townhall of Madrid (2024).<a h ref="https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Noticias/El-Geoportal-del-Ayuntamiento-se-consolida-como-referente-de-innovacion-con-180-000-usuarios-al-mes-y-700-conjuntos-de-datos/?vgnextfmt=default&vgnextoid=0096e8260b23e810VgnVCM1000001d4a900aRCRD&vgnextchannel=a12149fa40ec9410VgnVCM100000171f5a0aRCRD">  + info (in Spanish)</a></li>
+                    <li>Diploma for Technology Innovation - Official College of Geomatic and Topographic Engineeering (2023).<a href="https://www.topografia.upm.es/LaEscuela/Eventos?prefmt=articulo&fmt=detail&id=CON02395"> + info (in Spanish)</a></li>
+                    <li>Finalist of U4Impact Sustainability Awards - U4Impact (2024).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
             <h2>Courses</h2>
             <div class="certifications">
                 <p><strong>Introduction to FME Form</strong> - Con Terra Spain (2025)</p>
@@ -375,16 +401,6 @@
             </div>
         </div>
         
-        <div class="section">
-            <h2>Awards</h2>
-            <div class="certifications">The Digital Twin of Southern Campus UPM project was awarded with:
-                <p><strong>Campus Sustainability grant</strong> - UPM (2023).</p>
-                <p><strong>Second prize of the International Awards of Francisco Coello</strong> - University of Jaén (2024).<a href="https://eps.ujaen.es/sites/centro_eps/files/uploads/ACTA_PREMIO_COELLO_2024.pdf"> + info (in Spanish)</a></p>
-                <p><strong>First prize in the GeoData Awards</strong> - Townhall of Madrid (2024).<a h ref="https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Noticias/El-Geoportal-del-Ayuntamiento-se-consolida-como-referente-de-innovacion-con-180-000-usuarios-al-mes-y-700-conjuntos-de-datos/?vgnextfmt=default&vgnextoid=0096e8260b23e810VgnVCM1000001d4a900aRCRD&vgnextchannel=a12149fa40ec9410VgnVCM100000171f5a0aRCRD">  + info (in Spanish)</a></p>
-                <p><strong>Diploma for Technology Innovation</strong> - Official College of Geomatic and Topographic Engineeering (2023).<a href="https://www.topografia.upm.es/LaEscuela/Eventos?prefmt=articulo&fmt=detail&id=CON02395"> + info (in Spanish)</a></p>
-                <p><strong>Finalist of U4Impact Sustainability Awards</strong> - U4Impact (2024).</p>
-            </div>
-        </div>
         <div class="footer">
             <p>© 2025 María Pedrote Sanz</p>
         </div>
